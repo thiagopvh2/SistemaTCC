@@ -1,43 +1,241 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="sidebar-fixed header-fixed">
+    @*Barra do topo da tela*@
+    <div class="page-wrapper">
+        <nav class="navbar page-header">
+            <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="@Url.Action("Index","Home")">Logomarca aqui</a>
+
+            <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-md-down-none">
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-pill badge-danger">0</span>
+                    </a>
+                </li>
+
+                <li class="nav-item d-md-down-none">
+                    <a href="#">
+                        <i class="fa fa-envelope-open"></i>
+                        <span class="badge badge-pill badge-danger">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        @*Menu lateral*@
+        <div class="main-container">
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-title">Menu principal</li>
+
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","Home")" class="nav-link active">
+                                <i class="icon icon-speedometer"></i> Visão geral
+                            </a>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-target"></i> Lançamentos <i class="fa fa-caret-left"></i>
+                            </a>
+
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Contact","Home")" class="nav-link">
+                                        <i class="icon icon-target"></i> Normal
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("About","Home")" class="nav-link">
+                                        <i class="icon icon-target"></i> Fixed Sidebar
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="layouts-fixed-header.html" class="nav-link">
+                                        <i class="icon icon-target"></i> Fixed Header
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="layouts-hidden-sidebar.html" class="nav-link">
+                                        <i class="icon icon-target"></i> Hidden Sidebar
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-energy"></i> Cadastrar Categoria <i class="fa fa-caret-left"></i>
+                            </a>
+
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="alerts.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Alerts
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="buttons.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Buttons
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="cards.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Cards
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="modals.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Modals
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="tabs.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Tabs
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="progress-bars.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Progress Bars
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="widgets.html" class="nav-link">
+                                        <i class="icon icon-energy"></i> Widgets
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-graph"></i> Cadastrar Grupo <i class="fa fa-caret-left"></i>
+                            </a>
+
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="chartjs.html" class="nav-link">
+                                        <i class="icon icon-graph"></i> Chart.js
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="forms.html" class="nav-link">
+                                <i class="icon icon-puzzle"></i> Relatórios
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="tables.html" class="nav-link">
+                                <i class="icon icon-grid"></i> Usuários
+                            </a>
+                        </li>
+
+                        <li class="nav-title">Outros?</li>
+
+                        <li class="nav-item nav-dropdown">
+                            <a href="#" class="nav-link nav-dropdown-toggle">
+                                <i class="icon icon-umbrella"></i> Admininstrativo? <i class="fa fa-caret-left"></i>
+                            </a>
+
+                            <ul class="nav-dropdown-items">
+                                <li class="nav-item">
+                                    <a href="blank.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> Blank Page
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="login.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> Login
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="register.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> Register
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="invoice.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> Invoice
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="404.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> 404
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="500.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> 500
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="settings.html" class="nav-link">
+                                        <i class="icon icon-umbrella"></i> Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
+            <div class="content">
+                @RenderBody()
+                <div class="container body-content">
+
+
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
+                    </footer>
+                </div>
             </div>
         </div>
+        
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-        </footer>
-    </div>
+    
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/js")
+    @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
+
+
+
+
+

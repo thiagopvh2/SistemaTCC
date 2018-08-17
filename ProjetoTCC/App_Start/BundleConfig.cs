@@ -8,23 +8,35 @@ namespace ProjetoTCC
         // Para obter mais informações sobre o agrupamento, visite https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+                        "~/Scripts/jquery.min.js",
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/carbon.js",
+                        "~/Scripts/chart.min.js",
+                        "~/Scripts/demo.js",
+                        "~/Scripts/popper.min.js",
+                        "~/Scripts/modernizr.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate.min.js",
+                        "~/Scripts/jquery.validate.unobtrusive.min.js",
+                        "~/Scripts/jquery.validate.pt-br.min.js"));
 
-            // Use a versão em desenvolvimento do Modernizr para desenvolver e aprender. Em seguida, quando estiver
-            // pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/fa-brands.css",
+                      "~/Content/fa-brands.min.css",
+                      "~/Content/fa-regular.css",
+                      "~/Content/fa-regular.min.css",
+                      "~/Content/fa-solid.css",
+                      "~/Content/fa-solid.min.css",
+                      "~/Content/fontawesome-all.css",
+                      "~/Content/fontawesome-all.min.css",
+                      "~/Content/fontawesome.css",
+                      "~/Content/fontawesome.min.css",
+                      "~/Content/simple-line-icons.css",
+                      "~/Content/styles.css"));
         }
     }
 }
