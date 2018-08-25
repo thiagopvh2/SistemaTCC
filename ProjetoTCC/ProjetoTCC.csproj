@@ -156,6 +156,7 @@
     <Compile Include="Context\ProjetoTCCContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LancamentoController.cs" />
+    <Compile Include="Controllers\LancamentosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,7 +214,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -234,6 +237,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Lancamento\Lancar.cshtml" />
+    <Content Include="Views\Lancamentos\Criar.cshtml" />
+    <Content Include="Views\Lancamentos\Delete.cshtml" />
+    <Content Include="Views\Lancamentos\Details.cshtml" />
+    <Content Include="Views\Lancamentos\Edit.cshtml" />
+    <Content Include="Views\Lancamentos\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

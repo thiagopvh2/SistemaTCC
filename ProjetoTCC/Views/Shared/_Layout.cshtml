@@ -14,7 +14,7 @@
             <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
                 <i class="fa fa-bars"></i>
             </a>
-            <a href="@Url.Action("Index","Home")">Logomarca aqui</a>
+            <a href="@Url.Action("Index","Home")">Nome do sistema aqui</a>
 
             <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
                 <i class="fa fa-bars"></i>
@@ -57,14 +57,14 @@
 
                             <ul class="nav-dropdown-items">
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Lancar","Lancamento")" class="nav-link">
-                                        <i class="icon icon-target"></i> Normal
+                                    <a href="@Url.Action("Index","Lancamentos")" class="nav-link">
+                                        <i class="icon icon-target"></i> Lancamentos
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="@Url.Action("About","Home")" class="nav-link">
-                                        <i class="icon icon-target"></i> Fixed Sidebar
+                                    <a href="@Url.Action("Lancar","Lancamento")" class="nav-link">
+                                        <i class="icon icon-target"></i> Lancamento Teste
                                     </a>
                                 </li>
 
@@ -224,9 +224,9 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
-    
+
 
     @Scripts.Render("~/bundles/js")
     @Scripts.Render("~/bundles/jqueryval")
